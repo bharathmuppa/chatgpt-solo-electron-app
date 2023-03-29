@@ -1,0 +1,38 @@
+{
+  "name": "chatbot-solo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./",
+    "build:mac": "electron-builder --mac",
+    "build:win":"electron-builder --win"
+  },
+  "build": {
+    "productName": "Chat bot solo",
+    "appId": "com.hubot.chatbot-solo",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.icns"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.2.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "google-auth-library": "^8.7.0"
+  }
+}
